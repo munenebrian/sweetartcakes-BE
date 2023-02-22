@@ -93,12 +93,27 @@ def get_blogs(request):
         blogs = Blogs.objects.all()
         serializer = BlogsSerializer(blogs, many=True)
         return Response(serializer.data)
+    
+@api_view(['GET',])
+def api_blogscategories(request):
+    if request.method == "GET":
+        blogcategories = BlogCategory.objects.all()
+        serializer = BlogCategorySerializer(blogcategories, many=True)
+        return Response(serializer.data)
 
 @api_view(['GET'])
 def getBlogDetails(request, blog_id):
     if request.method == "GET":
         blogs= Blogs.objects.filter(id = blog_id)
         serializer = BlogsSerializer(blogs, many=True)
+        return Response(serializer.data)
+    
+@api_view(['GET'])
+def getBlogByCategory(request, blogcategory_id):
+    if request.method == "GET":
+        blogcategory = get_object_or_404(BlogCategory, id=blogcategory_id)
+        blogs = Blogs.objects.filter(blog_category=blogcategory)
+        serializer =BlogsSerializer(blogs, many=True)
         return Response(serializer.data)
 
 
