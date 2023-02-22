@@ -35,6 +35,20 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+class BlogCategory(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name = 'blogcategory'
+        verbose_name_plural = 'blogcategories'
+
+    def get_url(self):
+        return reverse('blogs_by_category', args=[self.slug])
+
+    def __str__(self):
+        return self.name
+
 class Blogs(models.Model):
     image = ImageField( manual_crop="")
     heading = models.CharField(max_length=100, blank=False)
@@ -42,6 +56,7 @@ class Blogs(models.Model):
     text = models.TextField(max_length=1000, blank=False, null=True)
     tex2 = models.TextField(max_length=1000, blank=True, null=True, default="")
     text3 = models.TextField(max_length=1000, blank=True, null=True, default="")
+    blog_category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE, default="")
 
     def __str__(self):
         return self.heading
