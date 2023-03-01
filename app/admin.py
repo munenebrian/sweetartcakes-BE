@@ -13,11 +13,11 @@ class BlogCategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 class OccassionalCakesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'new_price', 'old_price','category', 'is_available')
+    list_display = ('name', 'price','category', 'is_available')
     prepopulated_fields = {'slug': ('name',)}
 
 class WeddingCakesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'new_price', 'old_price', 'is_available')
+    list_display = ('name', 'price', 'range_price', 'is_available')
     prepopulated_fields = {'slug': ('name',)}
 
 admin.site.register(OccassionalCakes, OccassionalCakesAdmin )
