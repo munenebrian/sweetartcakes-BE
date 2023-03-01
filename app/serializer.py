@@ -7,13 +7,13 @@ class OccassionalCakesSerializer(serializers.ModelSerializer):
     category_id = serializers.IntegerField(source='category.id')
     class Meta:
         model = OccassionalCakes
-        fields = ['id', 'name', 'slug', 'image', 'image2', 'image3', 'description','new_price', 'old_price', 'is_available','category_name','category_slug','category_id']
+        fields = ['id', 'name', 'slug', 'image', 'image2', 'image3', 'description','price', 'is_available','category_name','category_slug','category_id']
 
 
 class WeddingCakesSerializer(serializers.ModelSerializer):
     class Meta:
         model = WeddingCakes
-        fields = ['id', 'name', 'slug', 'image', 'image2', 'image3', 'description','new_price', 'old_price', 'is_available']
+        fields = ['id', 'name', 'slug', 'image', 'image2', 'image3', 'description','price', 'range_price', 'is_available']
 
 
 class CategorySerializer(serializers.ModelSerializer):

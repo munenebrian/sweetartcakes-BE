@@ -24,8 +24,7 @@ class OccassionalCakes(models.Model):
     image2 = ImageField(blank=True, null=True, manual_crop="")
     image3 = ImageField(blank=True,null=True, manual_crop="")
     description = models.TextField(max_length=4000)
-    new_price = models.FloatField()
-    old_price = models.FloatField()
+    price = models.FloatField()
     is_available = models.BooleanField(default = True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
@@ -42,8 +41,8 @@ class WeddingCakes(models.Model):
     image2 = ImageField(blank=True, null=True, manual_crop="")
     image3 = ImageField(blank=True,null=True, manual_crop="")
     description = models.TextField(max_length=4000)
-    new_price = models.FloatField()
-    old_price = models.FloatField()
+    price = models.FloatField()
+    range_price = models.FloatField()
     is_available = models.BooleanField(default = True)
 
     class Meta:
