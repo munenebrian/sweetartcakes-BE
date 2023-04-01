@@ -16,6 +16,8 @@ class OccassionalCakesAdmin(admin.ModelAdmin):
     list_display = ('name', 'price','category', 'is_available')
     prepopulated_fields = {'slug': ('name',)}
 
+    
+
 class WeddingCakesAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'range_price', 'is_available')
     prepopulated_fields = {'slug': ('name',)}
