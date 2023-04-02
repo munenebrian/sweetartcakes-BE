@@ -106,6 +106,7 @@ DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS=['sweetartcakes-be-production.up.railway.app','127.0.0.1', 'https://sweetartcakes-be-production.up.railway.app/admin','http://localhost:4200']
 
+
 CSRF_TRUSTED_ORIGINS = ['https://sweetartcakes-be-production.up.railway.app']
 
 UPLOADCARE = {  
