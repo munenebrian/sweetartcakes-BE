@@ -337,6 +337,26 @@ def christeningCakesDetails(request, product_id):
         serializer = ChristeningCakesSerializer(product, many=True)
         return Response(serializer.data)
     
+@api_view(['GET',])
+def birthdayCakes(request):
+    if request.method == "GET":
+        products = BirthdayCakes.objects.all()
+
+        # Set up pagination
+        paginator = PageNumberPagination()
+        paginator.page_size = 300
+        result_page = paginator.paginate_queryset(products, request)
+
+        # Serialize the result page
+        serializer = BirthdayCakesSerializer(result_page, many=True)
+        return Response(serializer.data)
+
+@api_view(['GET'])
+def birthdayCakesDetails(request, product_id):
+    if request.method == "GET":
+        product= BirthdayCakes.objects.filter(id = product_id)
+        serializer = BirthdayCakesSerializer(product, many=True)
+        return Response(serializer.data)
 
 
 @api_view(['GET'])

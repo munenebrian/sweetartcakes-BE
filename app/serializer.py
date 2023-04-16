@@ -79,7 +79,12 @@ class ChristeningCakesSerializer(serializers.ModelSerializer):
         model = ChristeningCakes
         fields = ['id', 'name', 'slug', 'image', 'image2', 'image3', 'description','price', 'range_price', 'is_available']
 
+class BirthdayCakesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BirthdayCakes
+        fields = ['id', 'name', 'slug', 'image', 'image2', 'image3', 'description','price', 'range_price', 'is_available']
 
+        
 
 class BlogsSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(source='blog_category.name')
