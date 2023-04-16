@@ -6,12 +6,12 @@ urlpatterns = [
     path('blogcategories/', views.api_blogscategories, name='apiBlogCategories' ),
     path('getBlogDetails/<int:blog_id>/', views.getBlogDetails, name='Blog Details' ),
     path('categoryblogs/<int:blogcategory_id>/', views.getBlogByCategory, name='apiCategoryblogs' ),
-    
-    path('weddingcakes/', views.weddingCakes, name='weddingcakes' ),
-    path('weddingcakedetails/<int:product_id>/', views.weddingCakeDetails, name='weddingCakeDetails' ),
 
     path('weddingcakes/', views.weddingCakes, name='weddingcakes' ),
     path('weddingcakedetails/<int:product_id>/', views.weddingCakeDetails, name='weddingCakeDetails' ),
+
+    path('birthdaycakes/', views.birthdayCakes, name='birthdayCakes' ),
+    path('birthdaycakedetails/<int:product_id>/', views.birthdayCakesDetails, name='birthdayCakesDetails' ),
 
     path('babyShowerCakes/', views.babyShowerCakes, name='babyShowerCakes' ),
     path('babyShowerCakesDetails/<int:product_id>/', views.babyShowerCakesDetails, name='babyShowerCakesDetails' ),
