@@ -17,7 +17,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-class OccassionalCakes(models.Model):
+class BabyShowerCakes(models.Model):
     name = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     image = ImageField( manual_crop="")
@@ -26,7 +26,214 @@ class OccassionalCakes(models.Model):
     description = models.TextField(max_length=4000)
     price = models.FloatField()
     is_available = models.BooleanField(default = True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+    
+class BridalShowerCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+    
+class ChristmasCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class EasterCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+    
+class FathersDayCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class MothersDayCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class GraduationCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+    
+class ValentinesCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class RuracioCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class EngagementCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+    
+class CoporateCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class AnniversaryCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+    
+class BaptismalCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
+
+    class Meta:
+        ordering = ('name',)
+
+    def __str__(self):
+        return self.name
+
+class ChristeningCakes(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    image = ImageField( manual_crop="")
+    image2 = ImageField(blank=True, null=True, manual_crop="")
+    image3 = ImageField(blank=True,null=True, manual_crop="")
+    description = models.TextField(max_length=4000)
+    price = models.FloatField()
+    is_available = models.BooleanField(default = True)
 
     class Meta:
         ordering = ('name',)
@@ -41,8 +248,6 @@ class WeddingCakes(models.Model):
     image2 = ImageField(blank=True, null=True, manual_crop="")
     image3 = ImageField(blank=True,null=True, manual_crop="")
     description = models.TextField(max_length=4000)
-    price = models.FloatField()
-    range_price = models.FloatField()
     is_available = models.BooleanField(default = True)
 
     class Meta:
