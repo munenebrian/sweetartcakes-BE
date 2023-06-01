@@ -72,7 +72,12 @@ class WeddingCakesAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_available')
     prepopulated_fields = {'slug': ('name',)}
 
+class BirthdayCakesAdmin(admin.ModelAdmin):
+    list_display = ('name', 'is_available')
+    prepopulated_fields = {'slug': ('name',)}
+
 admin.site.register(BabyShowerCakes, BabyShowerCakesAdmin )
+admin.site.register(BirthdayCakes, BirthdayCakesAdmin )
 admin.site.register(BridalShowerCakes, BridalShowerCakesAdmin )
 admin.site.register(ChristmasCakes, ChristmasCakesAdmin )
 admin.site.register(EasterCakes, EasterCakesAdmin )
