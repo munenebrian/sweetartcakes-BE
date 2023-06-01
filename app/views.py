@@ -359,6 +359,7 @@ def birthdayCakesDetails(request, product_id):
         return Response(serializer.data)
 
 
+
 @api_view(['GET'])
 def get_blogs(request):
     if request.method == "GET":

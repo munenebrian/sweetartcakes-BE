@@ -23,6 +23,7 @@ urlpatterns = [
     path('christmasCakesDetails/<int:product_id>/', views.christmasCakesDetails, name='christmasCakesDetails' ),
 
 
+
     path('easterCakes/', views.easterCakes, name='easterCakes' ),
     path('easterCakesDetails/<int:product_id>/', views.easterCakesDetails, name='easterCakesDetails' ),
 
